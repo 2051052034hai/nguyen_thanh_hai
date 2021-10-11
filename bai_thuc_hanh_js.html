@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+      div.nhap{
+        margin:10px 0px;
+        color: white;
+      }
+      #form-1{
+        background-color:lightskyblue;
+        padding: 20px 20px 10px;
+        width: 22%;
+        font-size:25px;
+        border: 5px solid blue;
+      }
+      #form-1 input{
+        width:100%;
+        font-size: 20px;
+        padding:2px 2px;
+        outline: none;
+      }
+      button[type = "submit"]{
+        margin-top:10px;
+        font-size: 20px;
+        color:white;
+        font-weight: bold;
+        width:40%;
+        text-align: center;
+        padding:3px 5px;
+        background-color: blue;
+        border: 3px solid black;
+      }
+      form.form-2{
+       margin-top: 20px;
+       width:21%;
+       padding-right: 0;
+      }
+      form.form-2 span{
+      font-weight: bold;
+      }
+      form.form-2 > div,nhap{
+        padding:0;
+      }
+      form.form-2 input{
+        display: inline;
+        width:86%;
+      }
+      .invalist{
+        border:3px solid red;
+      }
+    </Style>
+</head>
+<body>
+  <form id="form-1" onsubmit="return false">
+    <h4>Giải phương trình ax<sup>2</sup> + bx + c = 0</h4>
+  <div class = "nhap">
+  <label for="lable"> Hệ số a </label>
+  <input type="text" id="heso-a">
+  </div >
+  <div class = "nhap">
+    <label for="lable"> Hệ số b </label>
+    <input type="text" id="heso-b">
+    </div>
+    <div class = "nhap">
+      <label for="lable"> Hệ số c </label>
+      <input type="text" id="heso-c">
+      </div>
+      <h3 class ="content"></h3>
+      <button id="bnt" type="submit" onclick="myFunction1()">Giải</button>
+</form>
+  <script>
+function myFunction1(){
+    var a1 =  document.getElementById('heso-a');
+    var b1 =  document.getElementById('heso-b');
+    var c1 =  document.getElementById('heso-c');
+    var h3 = document.getElementsByClassName('content')[0]
+    if(a1 != null && b1 != null && c1 != null && h3 != null) {
+      a = a1.value; b = b1.value; c = c1.value; h3.style.fontSize = "25px";
+     if(a.trim() ==""){
+       a1.classList.add('invalist')
+     }else
+        a1.classList.remove('invalist')
+        if(b.trim() ==""){
+       b1.classList.add('invalist')
+     }else
+        b1.classList.remove('invalist')
+        if(c.trim() ==""){
+       c1.classList.add('invalist')
+     }else
+        c1.classList.remove('invalist')
+        a1.oninput = function(){
+          a1.classList.remove('invalist')
+        }
+        b1.oninput = function(){
+          b1.classList.remove('invalist')
+        }
+        c1.oninput = function(){
+          c1.classList.remove('invalist')
+        }
+      if(a.trim() != "" && b.trim() != "" && c.trim() !=""){
+        if(a == 0) {
+           if(b == 0) {
+             if(c == 0) {
+          h3.innerText = 'Phương trình có vô số nghiệm phân biệt';
+        }else
+        h3.innerText = 'Phương trình vô nghiệm';
+      }else
+      h3.innerText = "Phương trình có nghiệm duy nhất x = "+(-c/b);
+    }else{
+      var detal = b*b - 4*a*c;
+      if(detal < 0){
+        h3.innerText = 'Phương trình vô nghiệm';
+      }else if(detal == 0){
+        var sum = -b/2*a;
+        h3.innerText = 'Phương trình có nghiệm kép:\n x1 = x2 = ' + sum;
+      }else{
+        var x1 = ((-b+Math.sqrt(detal))/(2*a)).toFixed(2);
+        var x2 = ((-b-Math.sqrt(detal))/(2*a)).toFixed(2);
+        h3.innerText = `Phương trình có 2 nghiệm phân biệt:\n x1 = ${x1} \n x2 = ${x2}`
+      }
+    }
+  }
+}
+}
+  </script>
+</body>
+</html>
