@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif
+        }
+        h1{
+            font-size:40px;
+            padding: 20px 25px;
+            background-image: linear-gradient(blue,lightblue);
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+        div.all-items{
+            display: flex;
+            flex-wrap: wrap;
+            padding:20px;
+        }
+        div.all-items > div{
+            width: 24%;
+            margin:0.5%;
+            border: 1px solid black;
+            position: relative;
+            
+        }
+        div.item > img{
+            width:100%;
+        }
+        div.h3{
+            background-color:greenyellow;
+            overflow: hidden;
+        }
+        div.item h3{
+            text-align: center;
+            color:white;
+            font-size:25px;
+            margin:0;
+            padding:10px 0px;
+            position:relative;
+        }
+        a.delete{
+            position:absolute;
+            right:15px;
+            top:10px;
+            color:white;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration:none;
+            transition: all 0.7s;
+            display: none;
+        }
+        a.delete:hover{
+            color: red;
+        }
+        div.item:hover {
+            border:3px solid blue; 
+        }
+        div.item:hover a.delete{
+            display: block;
+        }
+        div.item:hover h3{
+            animation: move-left 5s infinite;
+            text-align: left;
+        }
+        @keyframes move-left {
+            from{
+                left:0px;
+            }to{
+                left:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>KHOÁ HỌC TRỰC TUYẾN</h1>
+    <div class="all-items" id ="all">
+        <div class="item">
+           <div class="h3">
+            <h3>Lập trình c++ căn bản</h3>
+           </div> 
+            <img src="images/cpp-bg.jpg" alt="picture">
+            <a class = "delete" href="#">X</a>
+        </div>
+        <div class="item" onclick="myfunction()">
+            <img src="images/add-large.png" alt="picture">
+        </div>
+    </div>
+    <script>
+        var dem = 2;
+        function myfunction(){
+         arr = ["#1D55A0", "#ED1B24","#FF9F00", "#00A652", "#993300", "#663399"]
+        const randomColor = arr[Math.floor(Math.random() * arr.length)];
+        arr2 = ["category1.jpg", "category2.jpg", "category3.jpg",
+                "category4.jpg", "category5.jpg"]
+        const randomPicture = arr2[Math.floor(Math.random() * arr2.length)];
+        var a = prompt("Tên môn học mới:")
+        var itemElement = document.getElementById('all')
+        var content = document.createElement('div');
+        content.setAttribute("class","item")
+        content.innerHTML = `
+        <div class="h3" style="background-color:${randomColor} !important">
+            <h3>${a}</h3>
+           </div> 
+            <img src="images/${randomPicture}" alt="picture">
+            <a class = "delete" href="#">X</a>`
+             itemElement.insertBefore(content,itemElement.childNodes[dem]);
+             dem++;
+             var list = document.querySelectorAll("div.item a");
+                for(var i = 0; i < list.length; i++){
+                    var  length = list.length;
+                        list[i].onclick = function(){
+                            if(length == 1){
+                            var Message = alert("Bạn phải giữ lại ít nhất 1 môn học");
+                            return;
+                            }
+                            var a = confirm("Bạn có chắc chắn muốn xóa môn học này?")
+                            if(a == true){
+                                this.parentElement.remove();
+                            }
+                            length--;
+                        }
+                }
+     }
+     // khi chưa thêm môn học nào
+     var list = document.querySelectorAll("div.item a")[0];
+     list.onclick = function(){
+        var Message = alert("Bạn phải giữ lại ít nhất 1 môn học");
+     }
+    </script>
+</body>
+</html>
