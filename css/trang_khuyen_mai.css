@@ -1,0 +1,177 @@
+body{
+    background-color:#f2f2f2;
+}
+section{
+    padding-top: 130px;
+    padding-bottom: 70px;
+}
+.all-khuyen-mai{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* định dạng chữ title khuyến mãi */
+.tin-khuyen-mai > h1{
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 2px white;
+}
+.tin-khuyen-mai > hr{
+    background-color: #dddddddd;
+    height: 1px;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+/* định dạng phần nội dung */
+.main-content-khuyen-mai{
+    font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.date-khuyen-mai{
+    font-weight: 500;
+}
+.title-khuyen-mai{
+    font-weight: bold;
+    font-size: 30px;
+}
+.content{
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.xem-tiep{
+   width: 30%;
+}
+.xem-tiep:hover{
+    color: deeppink;
+}
+.xem-tiep > a{
+    color: deeppink;
+    text-decoration: none;
+}
+@keyframes hieu-ung-xem-them1{
+    from{
+        margin-left: 0;
+        margin-right: 0;
+    }to{
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+    }
+}
+@keyframes hieu-ung-xem-them2{
+    from{
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+    }to{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.xem-tiep > a:hover{
+    animation: hieu-ung-xem-them1 1.5s forwards;
+}
+.xem-tiep >a:not(:hover){
+   animation:hieu-ung-xem-them2 1.5s forwards ;
+}
+/* định dạng phần ảnh bên phải */
+.picture-khuyen-mai{
+    width: 800px;
+}
+.slice-items{
+    height: 400px;
+}
+.picture-khuyen-mai > img{
+    width: 100%;
+    height: 100%;
+}
+hr{
+    background-color: #dddddddd;
+    opacity: 0.;
+    height: 1;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.carousel-control-prev{
+    background-color: #FF1493;
+    width: 50px;
+    padding: 5px;
+    height: 50px;
+    left: 180px;
+    top: 430px;
+    border-radius:100%;
+}
+.carousel-control-next{
+    background-color: #FF1493;
+    width: 50px;
+    padding: 5px;
+    height: 50px;
+    left: 245px;
+    top: 430px;
+    border-radius:100%;
+}
+/* định dạng cho phần ảnh phía dưới hr */
+.picture-item{
+    width: 657px;
+    height: 350px;
+}
+/* viết hiệu ứng cho phần ảnh */
+.picture-khuyen-mai{
+    overflow: hidden;
+}
+.picture-khuyen-mai > img{
+    transition: transform ease 4s;
+}
+.picture-khuyen-mai > img:hover{
+   transform: scale(1.2);
+}
+/* viết các hiệu ứng cho toàn trang */
+@keyframes khuyen-mai-trươt-tu-duoi-len{
+    from{
+        transform: translateY(250px);
+        opacity: 0;
+    }to{
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+}
+.khuyen-mai-trươt-tu-duoi-len{
+    animation:khuyen-mai-trươt-tu-duoi-len 3s forwards ;
+}
+@keyframes khuyen-mai-hien-ra{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.khuyen-mai-hien-ra{
+    animation: khuyen-mai-hien-ra 2.5s forwards;
+}
+/* Định dạng cho phần nút bấm chuyển trang khuyễn mãi */
+.all-nut-bam-khuyen-mai{
+    display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+.nut-bam-khuyen-mai{
+    background-color:deeppink;
+    margin: 0.2%;
+}
+.nut-bam-khuyen-mai > a{
+    background-color:#fff;
+    font-size: 20px;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.nut-bam-khuyen-mai > a:hover{
+    background-color: deeppink;
+    color: white;
+    transition: all .5s;
+    border-radius: 5px;
+}

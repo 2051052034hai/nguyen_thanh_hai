@@ -1,0 +1,123 @@
+/*/////////////////phần SECTION/////////////////*/
+section{
+   background-color: #e5f3f5;
+   padding-bottom: 10px;
+  position: relative;
+  padding-top: 50px;
+}
+.content-lien-he-center{
+   position: relative;
+   display: flex;
+   flex-flow:row wrap;
+   align-items: center;
+   margin-bottom: 50px;
+}
+span.content-lien-he{
+   text-align: center;
+   box-shadow: 0 0 3px #ccc;
+   padding: .5rem .8rem;
+   font-size: 25px;
+   font-weight: bold;
+  border: 2px solid #ddd;
+  background-color: white;
+}
+.content-lien-he-center b{
+  display: block;
+  -ms-flex: 1;
+  flex: 1;
+  height: 2px;
+  opacity: .1;
+  background-color: currentColor;
+}
+/* phần định dạng form liên hệ*/ 
+
+.all-form-lien-he {
+  margin-top: 20px;
+  width: 60%;
+  padding: 20px 50px 30px 50px;
+  border: 2px solid deeppink;
+  margin-bottom: 50px;
+  position: relative;
+ margin: 0 auto;
+}
+.form-lien-he{
+  margin-bottom: 20px;
+  
+}
+.form-lien-he > h3{
+  font-weight: bold;
+  font-size: 25px;
+  color: black !important;
+}
+.hieu-ung{
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  box-shadow: 0 0 8px #ccc;
+  outline: 0;
+  border: 1px solid #ddd;
+
+}
+.hieu-ung:hover{
+   box-shadow: none;
+  border: 1px solid lightskyblue;
+}
+/* Định dạng cho nút liên hệ */
+.button-lien-he{
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #FF1493;
+  border: 1px solid #FF1493;
+  outline: none;
+}
+.button-lien-he:hover{
+  background-color:#FF69B4;
+  border: 1px solid #FF69B4;
+  outline: none;
+}
+.invalid{
+  color: red;
+}
+.input-error{
+  border: 1px solid red !important;
+}
+.background-contact
+{
+   background-image: url("images5/background.jpg");
+   background-size: cover;
+   background-attachment: fixed;
+}
+.text-contact
+{
+   padding-top:200px;
+   padding-bottom:200px;
+   text-align: center;  
+   color:white;
+ 
+}
+.text-contact > h1
+{
+   font: bolder 100px/1.3 'Dancing Script', Helvetica, sans-serif;
+   animation: glow 1s ease-in-out infinite alternate;
+   
+}
+.text-contact > p
+{
+   font: bolder 50px/1.3 'Dancing Script', Helvetica, sans-serif;
+   animation: glow 1s ease-in-out infinite alternate;
+ 
+}
+@keyframes glow {
+   from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #99054f;
+   }
+   
+   to {
+     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ee1c85, 0 0 80px #52042b;
+   }
+ }

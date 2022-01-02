@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+header{
+    background-image: url("images1/bg6.gif");
+    position: relative;
+}
+div.danhsach{
+   text-align: center;
+    width: 30%;
+    padding: 60px;
+}
+div.nhasach
+{
+   width: 35%;
+   padding-top: 20px;
+  text-align: center;
+}
+div.anh > img{
+    position: absolute;
+    top: -30px;
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+}
+div.col10{
+    width: 15%;
+    border: 5px dotted blue;
+    background-color:#5ab5ea;
+    color: white;
+    margin: 0.5%;
+    text-align: center;
+    padding-top: 50px;
+}
+ div.items{   
+   display: flex;
+}
+nav ul{
+    background-color:#0099ff ;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+}
+nav ul.ul1{
+    display: flex;
+}
+nav .ul1 > li > a{
+    display: block;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;         
+}
+nav .ul1 > li > a.none{
+    border-right: 2px solid black;
+}
+nav .ul1 > li > a:hover{
+    color: white;
+    background-color: blue;
+}
+nav .ul2 > li > a{
+   display: block;
+   padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold; 
+    color: #3a5bef;
+    border-bottom: 1px solid white;
+    background-image: linear-gradient(#2ea9f9,#b4d8e8);        
+}
+nav .ul2 > li > a:hover
+{
+    color: white;
+    background-image: linear-gradient(blue,#2ea9f9);       
+}
+.supcontent{
+    display: none;
+}
+.sup:hover .supcontent{
+    display: block;
+    position: absolute;
+}
+/*///////////////////////////*/
+div.mucsach{
+   width: 17%;
+  border-right: 2px solid white;
+}
+div.mucsach > h1{
+    text-align: center;           
+}
+div.mucsach > ul{          
+    list-style-type: none;
+    padding: 0;
+}
+div > ul > li{
+    color: #3a5bef;
+    border-bottom: 1px solid white;
+    background-image: linear-gradient(#2ea9f9,#b4d8e8);
+}
+div > ul > li:last-child{
+    border: none;
+}
+div > ul > li > a{
+   display: block;
+   text-decoration: none;
+   padding: 15px 20px;
+    font-weight: bold;
+
+}
+div > ul > li > a:hover{
+    background-color: blue;
+    color: white;
+}
+div > ul > li > a > span
+{
+   color: yellow;
+}
+div.book{
+    width: 18.5%;
+    margin: 0.5%;
+    text-align: center;
+}
+div.name > h3{
+    margin: 0;
+    padding-bottom: 20px;
+}
+div.book > img{
+    width: 100%;
+}
+div.books{
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+  padding-left: 40px;
+  justify-content: space-evenly;
+}
+div.all{
+    display: flex;
+}
+section{
+    background-color:#b4d8e8;
+}
+/*////////////////////////////*/
+footer div
+{
+   background-image: linear-gradient(#2ea9f9,#b4d8e8);
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+}

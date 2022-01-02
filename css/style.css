@@ -1,0 +1,44 @@
+tbody td
+{
+ padding-top: 20px;
+}
+table
+{
+ border-collapse: collapse;
+}
+tfoot,h1
+{
+ text-align: center; 
+}
+thead
+{
+  background-color: lightgray;
+  color: white;
+}
+tfoot
+{
+  background-color: blue;
+  color: white;
+}
+tbody
+{
+  background-color: gray;
+   vertical-align: top;
+}
+table .white
+{
+    background-color: white;
+}
+a
+{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 14px;
+    font-size: 18px;
+}
+a:hover
+{
+    background-color: #0000FF;
+    color: #FFFFFF;
+}
